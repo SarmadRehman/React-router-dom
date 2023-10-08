@@ -1,14 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
 import "./App.css";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <section>
-      <h1 className="bg-green-400 p-4">hi there</h1>
+      <Header />
+      <Outlet />
+      <Footer />
     </section>
   );
 }
